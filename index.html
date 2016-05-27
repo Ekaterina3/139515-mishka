@@ -5,8 +5,130 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="main-nav__logo">
+          <img src="#" width="#" height="#" alt="MISHKA">
+        </div>
+        <button class="main-nav__btn  main-nav__btn--close" type="button">Меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">Каталог товаров</li>
+          <li class="main-nav__item">Вязание на заказ</li>
+          <li class="main-nav__item  main-nav__item--search">Поиск по сайту</li>
+          <li class="main-nav__item  main-nav__item--basket">Корзина: пока пуста</li>
+        </ul>
+      </nav>
+      <div class="main-header__content  main-header__content--index">
+        <h1 class="main-header__title">Милые штуки ручной работы для дома</h1>
+        <div class="main-header__inner-nav-list">
+          <a class="main-header__inner-nav-item  main-header__inner-nav-item--interior">Предметы интерьера</a>
+          <a class="main-header__inner-nav-item  main-header__inner-nav-item--toys">Детские игрушки</a>
+        </div>
+      </div>
+    </header>
+    <main class="index-content">
+      <section class="popular-goods">
+        <h2 class="popular-goods__title">Вязаные корзинки</h1>
+        <b class="popular-goods__sub-title">Товар недели</b>
+        <p class="popular-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
+        <table class="popular-goods__parameters">
+         <tr>
+           <td class="popular-goods__field">Цвет:</td>
+           <td class="popular-goods__value">«Тиффани»/серый</td>
+         </tr>
+         <tr>
+           <td class="popular-goods__field">Диаметр:</td>
+           <td class="popular-goods__value">25 см</td>
+         </tr>
+         <tr>
+           <td class="popular-goods__field">Высота:</td>
+           <td class="popular-goods__value">15 см</td>
+         </tr>
+        </table>
+        <div class="popular-goods__icon">
+         <img src="#" width="#" height="#" alt="Вязаные корзинки">
+        </div>
+        <span class="popular-goods__price">Цена: 990 руб.</span>
+        <a class="popular-goods__order-btn  btn" href="#">Заказать</a>
+      </section>
+      <section class="features">
+        <h2 class="features__title">Коротко о нас:</h2>
+        <ul class="features__list">
+         <li class="features__item">
+           <span class="features__icon"></span>
+           <p class="features__content">Экологически чистые материалы</p>
+         </li>
+         <li class="features__item">
+           <span class="features__icon"></span>
+           <p class="features__content">Скандинавский стиль по российской цене</p>
+         </li>
+         <li class="features__item">
+           <span class="features__icon"></span>
+           <p class="features__content">Увеличивает лайки на фотографиях</p>
+         </li>
+         <li class="features__item">
+           <span class="features__icon"></span>
+           <p class="features__content">Связано вручную с любовью и умилением</p>
+         </li>
+         <li class="features__item">
+           <span class="features__icon"></span>
+           <p class="features__content">Поддержка отчественного производителя</p>
+         </li>
+         <li class="features__item">
+           <span class="features__icon"></span>
+           <p class="features__content">Поставляется в подарочной упаковке</p>
+         </li> 
+        </ul>
+      </section>
+      <section class="reviews">
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__wrapper slider">
+          <div class="reviews__list">
+            <!--Комментарий обернут в article аналогично примеру в спецификации. Подойдет здесь такой вариант или лучше использовать blockquote?-->
+            <article class="reviews__item slider__item">
+              <p class="reviews__content">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
+              <span class="reviews__author-name">Анастасия Красильникова</span>
+              <cite class="reviews__author-link">@misssssiskras</cite>
+            </article>
+            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+            <button class="reviews__next" type="button">Следующий отзыв</button>
+          </div>
+        </div>
+        <a class="reviews__write  btn" href="#">Написать</a>
+      </section>
+      <div class="contacts">
+        <table class="contacts__list">
+          <tr>
+            <td class="contacts__field">e-mail:</td>
+            <td class="contacts__value">
+              <a href="mailto:info@mimimishashop.ru">info@mimimishashop.ru</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="contacts__field">адрес:</td>
+            <td class="contacts__value">
+              г. Санкт-Петербург,<br>
+              ул. Большая Конюшенная,
+              д. 19/8, офис 101
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="map">
+      
+      </div>
+      <a class="write-us  btn">Напишите нам</a>
+    </main>
+    <footer class="main-footer">
+      <div class="footer-social">
+        <a class="footer-social__link  footer-social__link--inst" href="#">Инстаграм</a>
+        <a class="footer-social__link  footer-social__link--fb" href="#">Фейсбук</a>
+        <a class="footer-social__link  footer-social__link--tw" href="#">Твиттер</a>
+      </div>
+      <div class="footer-copyright">
+        Разработано
+        <span class="footer-copyright__icon"></span>
+      </div>
+    </footer>
   </body>
 </html>
