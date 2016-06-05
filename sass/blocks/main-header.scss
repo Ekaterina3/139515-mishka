@@ -6,6 +6,9 @@
   text-align: center;
   background-color: $main-header-bg;
   margin: 0;
+  padding-top: 72px;
+  padding-bottom: 75px;
+  outline: 1px solid blue;
 }
 
 .main-header__title--index {
@@ -25,12 +28,30 @@
 }
 
 .main-header__inner-nav-item {
+  display: block;
+  font-size: 0;
+}
+
+.main-header__inner-nav-item {
   $font-color: #ffffff;
   font-family: $font-family;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
+  text-align: left;
   color: $font-color;
   text-decoration: none;
+  padding: 28px 29px;
 }
 
+.main-header__inner-wrapper {
+  outline: 1px solid red;
+}
+
+.main-nav{
+  outline: 1px solid blue;
+}
+
+.main-header {
+  margin-bottom: 30px;
+}

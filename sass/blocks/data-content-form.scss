@@ -3,6 +3,7 @@
   font-size: 15px;
   line-height: 25px;
   font-weight: normal;
+  outline: 1px solid blue;
 }
 
 .form__title {
@@ -20,4 +21,13 @@
   font-size: 17px;
   line-height: 19px;
   font-weight: bold;
+}
+
+.form__item {
+  padding: 0;
+}
+
+.form__list {
+  margin-bottom: 58px;
+  outline: 1px solid blue;
 }

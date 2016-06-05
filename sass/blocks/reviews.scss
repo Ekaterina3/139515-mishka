@@ -3,7 +3,7 @@
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 29px;
 }
 
 .reviews__item {
@@ -13,10 +13,19 @@
   font-weight: normal;
 }
 
+.reviews__content {
+//  margin-bottom: 14px;
+}
+
 .reviews__author-name {
   font-weight: bold;
 }
 
 .reviews__author-link {
   font-style: normal;
+}
+
+.reviews {
+  margin-bottom: 91px;
+  outline: 1px solid red;
 }
