@@ -1,0 +1,22 @@
+.reviews__title {
+  @include basic-font;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.reviews__item {
+  @include basic-font;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.reviews__author-name {
+  font-weight: bold;
+}
+
+.reviews__author-link {
+  font-style: normal;
+}

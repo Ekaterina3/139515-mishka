@@ -1,0 +1,25 @@
+.catalog-item__name {
+  @include basic-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.catalog-item__parameters {
+  @include basic-font;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.catalog-item__price {
+  @include basic-font;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.catalog-item h3 {
+  margin: 0;
+}

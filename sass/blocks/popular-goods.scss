@@ -1,0 +1,35 @@
+.popular-goods__title {
+  @include basic-font;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.popular-goods__subtitle {
+  $font-color: #63d1bb;
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $font-color;
+}
+.popular-goods__description {
+  @include basic-font;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+}
+.popular-goods__parameters {
+  @include basic-font;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+}
+.popular-goods__price {
+  @include basic-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
