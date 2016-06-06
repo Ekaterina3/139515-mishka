@@ -1,0 +1,11 @@
+.main-nav__item a {
+  @include basic-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-nav__list{
+  margin: 0;
+}

@@ -1,0 +1,25 @@
+
+.contacts {
+  @include basic-font;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.contacts__title {
+  @include basic-font;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+.contacts__value a {
+  text-decoration: none;
+  color: $font-color;
+}
+
+.contacts__list {
+  outline: 1px solid blue;
+  margin: 0;
+}

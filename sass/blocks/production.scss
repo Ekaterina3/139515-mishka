@@ -1,0 +1,27 @@
+.production {
+  padding-top: 25px;
+  padding-bottom: 32px;
+  margin-bottom: 58px;
+  outline: 1px solid blue;
+}
+
+.production__title {
+  @include basic-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+//  margin-bottom: 22px;
+//  margin-left: 90px;
+}
+
+.production__info {
+  @include basic-font;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+//  margin-bottom: 22px;
+}
+
+.production__video {
+//  margin-bottom: 30px;
+}
