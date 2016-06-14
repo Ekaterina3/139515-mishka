@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -44,49 +45,61 @@
         <section class="popular-goods">
           <h2 class="popular-goods__title">Вязаные корзинки</h1>
           <b class="popular-goods__subtitle">Товар недели</b>
-          <p class="popular-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
-          <table class="popular-goods__parameters">
-           <tr>
-             <td class="popular-goods__field">Цвет:</td>
-             <td class="popular-goods__value">«Тиффани»/серый</td>
-           </tr>
-           <tr>
-             <td class="popular-goods__field">Диаметр:</td>
-             <td class="popular-goods__value">25 см</td>
-           </tr>
-           <tr>
-             <td class="popular-goods__field">Высота:</td>
-             <td class="popular-goods__value">15 см</td>
-           </tr>
-          </table>
-          <div class="popular-goods__icon">
-           <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+          <div class="popular-goods__content">
+            <p class="popular-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
+            <table class="popular-goods__parameters">
+             <tr>
+               <td class="popular-goods__field">Цвет:</td>
+               <td class="popular-goods__value">«Тиффани»/серый</td>
+             </tr>
+             <tr>
+               <td class="popular-goods__field">Диаметр:</td>
+               <td class="popular-goods__value">25 см</td>
+             </tr>
+             <tr>
+               <td class="popular-goods__field">Высота:</td>
+               <td class="popular-goods__value">15 см</td>
+             </tr>
+            </table>
+            <div class="popular-goods__icon">
+             <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+            </div>
+            <span class="popular-goods__price">Цена: 990 руб.</span>
+            <a class="popular-goods__order-btn  btn" href="#">Заказать</a>
           </div>
-          <span class="popular-goods__price">Цена: 990 руб.</span>
-          <a class="popular-goods__order-btn  btn" href="#">Заказать</a>
         </section>
         <section class="features">
           <h2 class="features__title">Коротко о нас:</h2>
           <ul class="features__list">
-           <li class="features__item">Экологически чистые материалы</li>
-           <li class="features__item">Скандинавский стиль по российской цене</li>
-           <li class="features__item">Увеличивает лайки на фотографиях</li>
-           <li class="features__item">Связано вручную с любовью и умилением</li>
-           <li class="features__item">Поддержка отчественного производителя</li>
-           <li class="features__item">Поставляется в подарочной упаковке</li> 
+           <li class="features__item">Экологически<br>
+             чистые материалы</li>
+           <li class="features__item">Скандинавский стиль<br>
+             по российской цене</li>
+           <li class="features__item">Увеличивает лайки<br>
+             на фотографиях</li>
+           <li class="features__item">Связано вручную с <br>
+             любовью и умилением</li>
+           <li class="features__item">Поддержка отчественного<br>
+             производителя</li>
+           <li class="features__item">Поставляется в<br>
+             подарочной упаковке</li> 
           </ul>
         </section>
+      </div>
+      <div class="reviews__wrapper">
         <section class="reviews">
           <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__wrapper slider">
+          <div class="slider">
             <div class="reviews__list">
               <article class="reviews__item slider__item">
                 <p class="reviews__content">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
                 <span class="reviews__author-name">Анастасия Красильникова</span>
                 <cite class="reviews__author-link">@misssssiskras</cite>
               </article>
-              <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-              <button class="reviews__next" type="button">Следующий отзыв</button>
+              <div class="reviews__nav">
+                <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+                <button class="reviews__next" type="button">Следующий отзыв</button>
+              </div>
             </div>
           </div>
           <a class="reviews__write  btn" href="#">Написать</a>
@@ -96,16 +109,20 @@
         <div class="contacts">
           <h2 class="contacts__title">Контакты</h2>
           <dl class="contacts__list">
-            <dt class="contacts__field">e-mail:</dt>
-            <dd class="contacts__value">
-              <a href="mailto:info@mimimishashop.ru">info@mimimishashop.ru</a>
-            </dd>
-            <dt class="contacts__field">адрес:</dt>
-            <dd class="contacts__value">
-              г. Санкт-Петербург,<br>
-              ул. Большая Конюшенная,
-              д. 19/8, офис 101
-            </dd>
+           <div class="contacts__row">
+              <dt class="contacts__field">e-mail:</dt>
+              <dd class="contacts__value">
+                <a href="mailto:info@mimimishashop.ru">info@mimimishashop.ru</a>
+              </dd>
+            </div>
+            <div class="contacts__row">
+              <dt class="contacts__field">адрес:</dt>
+              <dd class="contacts__value">
+                г. Санкт-Петербург,<br>
+                ул. Большая Конюшенная,
+                д. 19/8, офис 101
+              </dd>
+            </div>
           </dl>
         </div>
         <div class="map">
@@ -116,6 +133,11 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__inner-wrapper">
+        <div class="footer-logo">
+          <a>
+            <img src="#" width="#" height="#" alt="MISHKA">
+          </a>
+        </div>
         <div class="footer-social">
           <a class="footer-social__link  footer-social__link--inst" href="#">Инстаграм</a>
           <a class="footer-social__link  footer-social__link--fb" href="#">Фейсбук</a>

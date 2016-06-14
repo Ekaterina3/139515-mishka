@@ -1,23 +1,43 @@
+.features {
+  margin-bottom: 60px;
+  outline: 1px solid red;
+
+  @media ($desktop-widths) {
+    padding: 0 175px;
+  }
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  @media ($tablet-widths) {
+    max-height: 300px; /*временная высота для сетки*/
+  }
+
+  @media ($desktop-widths) {
+    max-height: 300px; /*временная высота для сетки*/
+  }
+}
+
 .features__title {
+  margin: 0;
+  
   @include basic-font;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
-  margin: 0;
 }
 
 .features__item {
+  height: 100px; /*временная высота для сетки*/
+  
   @include basic-font;
   font-size: 16px;
   line-height: auto;
   font-weight: bold;
-}
-
-.features {
-  margin-bottom: 60px;
-  outline: 1px solid red;
-}
-
-.features__list {
-  margin: 0;
 }

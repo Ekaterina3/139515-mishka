@@ -4,5 +4,42 @@
 
 .main-footer__inner-wrapper {
   outline: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0 30px;
+  width: 260px;
+  margin: 0 auto;
+  
+  
+  @media ($tablet-widths) {
+    width: 668px;
+    padding: 0 50px;
+  }
+
+  @media ($desktop-widths) {
+    width: 1050px;
+    padding: 0 50px;
+  }
+}
+
+.footer-logo {
+  display: none;
+  
+  @media ($tablet-widths) {
+    display: block;
+  }
+  
+  @media ($desktop-widths) {
+    display: block;
+  }
+}
+
+.footer-social {
+  margin: auto;
+}
+
+.footer-copyright {
+  @media ($mobile-widths-only) {
+    margin: auto;
+  }
 }

@@ -1,9 +1,22 @@
 
 .contacts {
+  max-width: 350px;
+  padding: 0 30px;
+  
   @include basic-font;
   font-size: 14px;
   line-height: 30px;
   font-weight: normal;
+  
+  @media ($tablet-widths) {
+    padding: 0 50px;
+  }
+
+  @media ($desktop-widths) {
+    margin-left: 175px;
+    padding: 0;
+  }
+  
 }
 
 .contacts__title {
@@ -21,5 +34,43 @@
 
 .contacts__list {
   outline: 1px solid blue;
+  display: table;
   margin: 0;
+  
+ @media ($tablet-widths) and ($tablet-widths-max) {
+   width: 668px; 
+   font-size: 0;
+  }
+  
+  @media ($desktop-widths) {
+    font-size: 16px;
+  }
+}
+
+.contacts__row {
+  display: table-row;
+  
+  @media ($tablet-widths) and ($tablet-widths-max) {
+    display: inline-block;
+    width: 334px;
+    font-size: 16px;
+    vertical-align: top;    
+  }
+}
+
+.contacts__field {
+  display: table-cell;
+  padding-right: 35px;
+  
+  @media ($tablet-widths) {
+    padding-right: 29px;
+  }
+  
+  @media ($desktop-widths) {
+    padding-right: 29px;
+  }
+}
+.contacts__value {
+  display: table-cell;
+  max-width: 207px;
 }

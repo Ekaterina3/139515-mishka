@@ -1,4 +1,19 @@
 .contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin-bottom: 39px;
   outline: 1px solid red;
+  width: 320px;
+  margin: 0 auto;
+  
+  @media ($tablet-widths) {
+    width: 768px;
+  }
+
+  @media ($desktop-widths) {
+    width: 1050px;
+    padding: 0 50px;
+    height: 457px;
+  }
 }
