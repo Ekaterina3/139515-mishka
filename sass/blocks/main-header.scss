@@ -1,38 +1,85 @@
+.main-header {
+  margin-bottom: 30px;
+}
+
+.main-header__top {
+  display: flex;
+  flex-direction: column;
+  
+  @media ($tablet-widths) {
+    flex-direction: row;
+  }
+}
+
+.main-header__inner-wrapper {
+  outline: 1px solid red;
+  width: 320px;
+  margin: 0 auto;
+  
+  @media ($tablet-widths) {
+    width: 768px;
+  }
+
+  @media ($desktop-widths) {
+    width: 1150px;
+  }
+}
+
+.main-header__logo {
+  width: 320px;
+  height: 57px;
+  padding-top: 20px;
+  
+  text-align: center;
+  
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  
+  @media ($tablet-widths) {
+    border: none;
+  }
+}
+
 .main-header__title {
+  margin: 0;
+  padding-top: 72px;
+  padding-bottom: 75px;
+  
   @include basic-font;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
   text-align: center;
-  background-color: $main-header-bg;
-  margin: 0;
-  padding-top: 72px;
-  padding-bottom: 75px;
-  outline: 1px solid blue;
+  
+  background-color: $main-header-bg; 
 }
 
 .main-header__title--index {
   padding-top: 89px;
   padding-bottom: 120px;
   margin: 0;
-  background: $main-header-bg url("../../img/hero-mobile@1x.jpg") no-repeat center top;
-
+  
+  background: $main-header-bg url("../img/hero-mobile@1x.jpg") no-repeat center top;
 }
 
-.main-header__inner-nav-item--interior {
-  background-color: #63d1bb;
-}
-
-.main-header__inner-nav-item--toys {
-  background-color: #56c3b2;
-}
-
-.main-header__inner-nav-item {
-  display: block;
+.main-header__inner-nav-list {
   font-size: 0;
+  background-color: $main-header-bg;
+  
+  @media ($tablet-widths) {
+    padding: 0 50px;
+  }
+  
+  @media ($desktop-widths) {
+    padding: 0 50px;
+  }
 }
 
 .main-header__inner-nav-item {
+  display: inline-block;
+  width: 262px;
+  padding: 28px 29px;
+  
   $font-color: #ffffff;
   font-family: $font-family;
   font-size: 18px;
@@ -41,17 +88,20 @@
   text-align: left;
   color: $font-color;
   text-decoration: none;
-  padding: 28px 29px;
+  
+  @media ($tablet-widths) {
+    width: 276px;
+  }
+
+  @media ($desktop-widths) {
+    width: 467px;
+  }
 }
 
-.main-header__inner-wrapper {
-  outline: 1px solid red;
+.main-header__inner-nav-item--interior {
+  background-color: #63d1bb;
 }
 
-.main-nav{
-  outline: 1px solid blue;
-}
-
-.main-header {
-  margin-bottom: 30px;
+.main-header__inner-nav-item--toys {
+  background-color: #56c3b2;
 }
