@@ -1,74 +1,91 @@
 .main-nav {
   position: relative;
-  width: 320px;
+  
+  display: flex;
+  flex-direction: column;
+  
   margin: 0 auto;
 }
 
 .main-nav__list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+}
+
+.main-nav__extra-list,
+.main-nav__info {
+  display: none;
 }
 
 .main-nav__item a {
   display: block;
+  box-sizing: border-box;
+  width: 320px;
   padding-top: 28px;
   padding-bottom: 26px;
   padding-left: 76px;
   padding-right: 30px;
-  border-bottom: 1px solid #000;
   
   @include basic-font;
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
-  text-decoration: none;
+  
+   border-bottom: 1px solid #000;
+}
+
+.main-nav__logo a {
+  height: 77px;
+  padding: 0;
+  padding-top: 20px;
+  
+  text-align: center;
+  
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;  
 }
 
 @media ($mobile-widths-only) {
   
   .main-nav__btn {
     position: absolute;
-    top: -78px;
+    top: 1px;
     right: 0;
     z-index: 2;
 
     display: block;
-    width: 51px;
-    height: 47px;
+    width: 70px;
+    height: 75px;
 
     font-size: 0;
-
-    border: none;
+    
+    background-color: #ffffff;
 }
 
-  .main-nav__btn--open::before {
+  .main-nav--closed .main-nav__btn::before {
     content: "";
     position: absolute;
-    top: 29px;
-    left: 0;
+    top: 30px;
+    right: 30px;
 
     width: 20px;
     height: 2px;
 
     background-color: #000000;
-    box-shadow: 0 8px 0 0 #000000,
-                0 16px 0 0 #000000;
+    box-shadow: 0 6px 0 0 #000000,
+                0 12px 0 0 #000000;
   }
 
-  .main-nav__btn--close {
+  .main-nav--opened .main-nav__btn {
     &::before,
     &::after { 
       content: "";
       position: absolute;
-      top: 38px;
-      left: 0;
-      right: auto;
+      top: 37px;
+      left: 19px;
 
-      width: 20px;
-      height: 2px;
+      width: 27px;
+      height: 2px; 
 
       background-color: #000000;
     }
@@ -82,26 +99,167 @@
     }
   }
 
-  .main-nav__wrapper--closed {
+  .main-nav--closed .main-nav__item {
     display: none;
+  }
+  .main-nav--closed .main-nav__logo {
+    display: block;
   }
 }
 
 @media ($tablet-widths) {
   
   .main-nav {
+    flex-direction: row;
+ 
     width: 100%;
     min-height: 88px;
-    margin: 0;
   }
   
   .main-nav__btn {
     display: none;
   }
   
-  .main-nav__item a {
-     border-bottom: none;
+  .main-nav__wrapper {
+    display: flex;
+    flex-direction: column;
   }
   
+  .main-nav__item a {
+    width: 167px;
+    min-height: 60px;
+    padding: 0;
+    padding-top: 15px;
+    
+    border-bottom: none;
+    outline: 1px solid blue;
+  }
+ 
+  .main-nav__info {
+    align-self: flex-end;
+    
+    display: block; 
+    box-sizing: border-box;
+    min-height: 60px;
+    padding-top: 15px;/*временное значение*/
+    margin-top: -60px;
+    margin-bottom: -60px;
+  }
   
+  .main-nav__search {
+    order: -2;
+    
+    margin-left: auto;
+  }
+  
+   .main-nav__search a {
+    width: 82px;
+    min-height: 88px;
+    
+    font-size: 0; 
+  }
+  
+  .main-nav__basket {
+    order: -1;
+  }
+  
+  .main-nav__basket a {
+    width: 265px;
+    min-height: 88px;
+    
+    text-align: right;
+  }
+  
+  .main-nav__logo {
+    order: -3;
+    
+    margin-right: 150px;
+  }
+  .main-nav__logo a {
+    width: 120px;
+    min-height: 88px;
+    
+    border: none;
+  }
+}
+
+@media ($desktop-widths) {
+  
+  .main-nav__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    margin-bottom: -60px;
+    
+    outline: 1px solid red;
+  }
+  
+  .main-nav__list {
+    flex-grow: 1;
+  }
+  
+  .main-nav__extra-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 4;
+    
+    max-width: 800px;
+    margin-left: 50px;
+  }
+  
+   .main-nav__info {
+    order: 5;
+    
+    margin: 0;
+  }
+  
+  .main-nav__extra-item a {
+    display: block;
+    box-sizing: border-box;
+    min-height: 60px;
+    padding-top: 15px;
+    margin-right: 60px;
+  }
+  
+  .main-nav__item a {
+    width: 239px;
+    min-height: 88px;
+    padding-left: 50px;
+  }
+  
+   .main-nav__item:nth-child(3) a {
+    padding-left: 35px;
+  }
+  
+  .main-nav__search {
+    order: 2;
+    
+    margin-left: auto;
+  }
+  
+  .main-nav__search a {
+    width: 84px;
+  }
+  
+  .main-nav__basket {
+    order: 3;
+  }
+  
+   .main-nav__basket a {
+    width: 316px;
+  }
+  
+  .main-nav__logo {
+    order: 1;
+    
+    margin: 0;
+    margin-left: 24px; /*временное значение*/
+  }
+  
+  .main-nav__logo a {
+    width: 150px;
+    padding-left: 0;
+  }
 }
