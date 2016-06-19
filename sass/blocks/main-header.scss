@@ -16,14 +16,11 @@
   }
 }
 
-
-
 .main-header__title {
   margin: 0;
   padding-top: 72px;
   padding-bottom: 75px;
   
-  @include basic-font;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
@@ -64,8 +61,8 @@
   line-height: 24px;
   font-weight: bold;
   text-align: left;
+  
   color: $font-color;
-  text-decoration: none;
   
   @media ($tablet-widths) {
     width: 276px;

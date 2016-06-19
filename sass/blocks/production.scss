@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  
   padding-bottom: 32px;
   margin-bottom: 58px;
   outline: 1px solid blue;
@@ -13,7 +14,6 @@
 }
 
 .production__title {
-  @include basic-font;
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
@@ -53,6 +53,7 @@
   
   @media ($tablet-widths) {
     height: 455px;
+    
     order: -1;
   }
   
@@ -60,6 +61,7 @@
     width: 682px;
     height: 455px;
     margin-right: 79px;
+    
     order: -1;
   }
 }

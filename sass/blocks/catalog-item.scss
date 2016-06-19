@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
+  
   margin-bottom: 30px;
   outline: 1px solid blue;
   
@@ -38,31 +39,26 @@
 ////  height: 100%;
 //}
 
-.catalog-item__icon img{
+.catalog-item__icon img {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
 .catalog-item__name {
-  @include basic-font;
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .catalog-item__parameters {
-  @include basic-font;
   font-size: 14px;
   line-height: 30px;
-  font-weight: normal;
 }
 
 .catalog-item__price {
   display: block;
   
-  @include basic-font;
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
