@@ -1,5 +1,7 @@
-@mixin basic-font() {
-  font-family: $font-family;
-  font-weight: $font-weight;
-  color: $font-color;
+@mixin basic-font($name, $size, $line, $weight, $color) {
+  font-family: $name;
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+  color: $color;
 }

@@ -20,7 +20,6 @@
 
 .popular-goods__title {
   font-size: 24px;
-  line-height: 30px;
   font-weight: bold;
   margin: 0;
 //  margin-bottom: 7px;
@@ -39,13 +38,9 @@
 }
 
 .popular-goods__subtitle {
-  $font-color: #63d1bb;
-  font-family: $font-family;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: bold;
+  @include basic-font($font-family, 16px, 16px, bold, #63d1bb);
   text-transform: uppercase;
-  color: $font-color;
+ 
 //  margin-bottom: 26px;
   
   @media ($tablet-widths) {
@@ -89,13 +84,6 @@
     font-size: 16px;
     line-height: 30px;
   }
-  
-//  @media ($desktop-widths) {
-//    width: 292px; 
-//    
-//    font-size: 16px;
-//    line-height: 30px;
-//  }
 }
 
 .popular-goods__parameters {
@@ -110,30 +98,17 @@
     font-size: 16px;
     line-height: 30px;
   }
-  
-//  @media ($desktop-widths) {
-//    width: 292px; 
-//    
-//    font-size: 16px;
-//    line-height: 30px; 
-//  }
 }
 
 .popular-goods__price {
   display: block;
   
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: bold;
+  @include basic-font($font-family, 16px, 24px, bold, $font-color);
   text-align: center;
   
   @media ($tablet-widths) {
     width: 292px;
   }
-  
-//  @media ($desktop-widths) {
-//    width: 292px;
-//  }
 }
 
 .popular-goods__icon {

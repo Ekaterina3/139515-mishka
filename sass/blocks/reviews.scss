@@ -1,13 +1,11 @@
 .reviews__title {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: bold;
+  @include basic-font($font-family, 24px, 30px, bold, $font-color);
+  
 //  margin-bottom: 29px;//
 }
 
 .reviews__item {
-  font-size: 14px;
-  line-height: 30px;  
+  font-size: 14px; 
 }
 
 .reviews__content {
@@ -37,14 +35,14 @@
     width: 668px;
     padding: 0 50px;
     
-    background: url("../../img/review@1x.jpg") no-repeat 0 0;
+    background: url("../img/review@1x.jpg") no-repeat 0 0;
   }
 
   @media ($desktop-widths) {
     width: 1050px;
 //    padding: 0 50px;
     
-    background: url("../../img/review@1x.jpg") no-repeat 50px 0;
+    background: url("../img/review@1x.jpg") no-repeat 50px 0;
   }
 }
 
@@ -81,9 +79,4 @@
     align-self: flex-end;
     margin-top: -30px;
   }
-//  @media ($desktop-widths) {
-//    align-self: flex-end;
-//    margin-top: -30px;
-//  }
 }
-

@@ -40,28 +40,21 @@
 //}
 
 .catalog-item__icon img {
-  width: 100%;
-  height: auto;
   overflow: hidden;
 }
 
 .catalog-item__name {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: bold;
+  @include basic-font($font-family, 16px, 24px, bold, $font-color);
 }
 
 .catalog-item__parameters {
-  font-size: 14px;
-  line-height: 30px;
+  @include basic-font($font-family, 14px, 30px, $font-weight, $font-color);
 }
 
 .catalog-item__price {
   display: block;
   
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: bold;
+  @include basic-font($font-family, 14px, 24px, bold, $font-color);
   
   @media ($tablet-widths) and ($tablet-widths-max) {
     margin-top: auto;

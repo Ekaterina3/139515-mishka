@@ -21,15 +21,15 @@
   padding-top: 72px;
   padding-bottom: 75px;
   
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: bold;
+  @include basic-font($font-family, 24px, 30px, bold, $font-color);
   text-align: center;
-  
+}
+
+.main-header__intro {
   background-color: $main-header-bg; 
 }
 
-.main-header__title--index {
+.main-header__intro--index {
   padding-top: 89px;
   padding-bottom: 120px;
   margin: 0;
@@ -39,7 +39,6 @@
 
 .main-header__inner-nav-list {
   font-size: 0;
-  background-color: $main-header-bg;
   
   @media ($tablet-widths) {
     padding: 0 50px;
@@ -52,17 +51,12 @@
 
 .main-header__inner-nav-item {
   display: inline-block;
+  vertical-align: middle;
   width: 262px;
   padding: 28px 29px;
   
-  $font-color: #ffffff;
-  font-family: $font-family;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
+  @include basic-font($font-family, 18px, 24px, bold, #ffffff);
   text-align: left;
-  
-  color: $font-color;
   
   @media ($tablet-widths) {
     width: 276px;

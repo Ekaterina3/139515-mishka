@@ -1,6 +1,5 @@
 .form-content__message {
-  font-size: 15px;
-  line-height: 25px;
+  @include basic-font($font-family, 15px, 25px, $font-weight, $font-color);
 }
 
 .form__list {
@@ -11,25 +10,20 @@
 
 .form__item {
   position: relative;
-  
+  @media ($tablet-widths) {
   display: flex;
   flex-direction: column;
+  }
 }
 
-.form__title {
-  $font-color: #63d1bb;
-  
+.form__title {  
   box-sizing: border-box;
   min-width: 64px;
   padding: 0;
   padding-right: 20px;
   
-  font-family: $font-family;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: bold;
+  @include basic-font($font-family, 16px, 16px, bold, #63d1bb);  
   text-transform: uppercase;
-  color: $font-color;
   
   background-color: #ffffff;
   
@@ -56,9 +50,7 @@
 }
 
 .form__item label {  
-  font-size: 17px;
-  line-height: 19px;
-  font-weight: bold;
+  @include basic-font($font-family, 17px, 19px, bold, $font-color);
 }
 
 .form__type label, 
