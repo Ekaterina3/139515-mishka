@@ -1,15 +1,16 @@
 .main-header {
   margin-bottom: 30px;
+  
   @media ($tablet-widths) {
     margin-bottom: 50px;
   }
+  
   @media ($desktop-widths) {
     margin-bottom: 70px;
   }
 }
 
 .main-header__inner-wrapper {
-  outline: 1px solid red;
   width: 320px;
   margin: 0 auto;
   
@@ -40,12 +41,12 @@
   text-align: center;
   
    @media ($tablet-widths) {
-    font-size: 40px;
+     font-size: 40px;
      line-height: 50px;
   }
   
   @media ($desktop-widths) {
-    font-size: 50px;
+     font-size: 50px;
      line-height: 57px;
   }
 }
@@ -55,7 +56,7 @@
   padding-top: 89px;
   padding-bottom: 120px;
   
-   @media ($tablet-widths) {
+  @media ($tablet-widths) {
     padding-top: 160px;
     padding-bottom: 371px;
   }
@@ -67,7 +68,7 @@
 
 .main-header__title--catalog {
   padding-top: 71px;
-   padding-bottom: 70px;
+  padding-bottom: 70px;
   
   @media ($tablet-widths) {
     padding-top: 95px;

@@ -3,7 +3,6 @@
 }
 
 .main-footer__inner-wrapper {
-  outline: 1px solid red;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -11,28 +10,30 @@
   width: 260px;
   padding: 0 30px;
   margin: 0 auto;
-  
-  
-  @media ($tablet-widths) {
-    width: 668px;
-    padding: 0 50px;
-  }
-
-  @media ($desktop-widths) {
-    width: 1050px;
-    padding: 0 50px;
-  }
 }
 
 .footer-logo {
   display: none;
+}
+@media ($tablet-widths) {
+  .main-footer__inner-wrapper {
+    width: 668px;
+    padding: 0 50px;
+  }
   
-  @media ($tablet-widths) {
+  .footer-logo {
     display: block;
     width: 102px;
     height: 34px;
     margin-top: 51px;
     margin-bottom: 58px;
     margin-right: 80px;
+  }
+}
+
+@media ($desktop-widths) {
+  .main-footer__inner-wrapper {
+     width: 1050px;
+    padding: 0 50px;
   }
 }

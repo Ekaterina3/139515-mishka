@@ -1,6 +1,5 @@
 .features {
   margin-bottom: 59px;
-  outline: 1px solid red;
 }
 
 .features__list {
@@ -13,17 +12,12 @@
   margin-bottom: 27px;
   
   @include basic-font($font-family, 24px, 30px, bold, $font-color);
-  
-     @media ($tablet-widths) {
-     
-      @include basic-font($font-family, 40px, 50px, bold, $font-color);
-  }
 }
 
 .features__item {
   width: 260px;
   padding-top: 61px;
-  margin-bottom: 25px; outline: 1px solid blue;
+  margin-bottom: 25px;
   
   @include basic-font($font-family, 16px, 18px, bold, $font-color);
   
@@ -34,11 +28,13 @@
 
 @media ($tablet-widths) {
   .features {
-  margin-bottom: 78px;
-}
+    margin-bottom: 78px;
+  }
   
   .features__title {
-  margin-bottom: 42px;
+    margin-bottom: 42px;
+    
+    @include basic-font($font-family, 40px, 50px, bold, $font-color);
   }
   
   .features__item {

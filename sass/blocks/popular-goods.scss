@@ -1,5 +1,5 @@
 .popular-goods {
-  display: flex; outline: 1px solid red;
+  display: flex;
   flex-direction: column;
   
   margin-bottom: 72px;
@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    
     margin-bottom: 123px;
   }
   
@@ -22,20 +23,21 @@
 }
 
 .popular-goods__title {
-  font-size: 24px;
-  font-weight: bold;
   margin-bottom: 7px;
   
+  font-size: 24px;
+  font-weight: bold;
+  
   @media ($tablet-widths) {
-       margin-bottom: 56px;
-      font-size: 40px;
+    margin-bottom: 56px;
+    
+    font-size: 40px;
     line-height: 50px;
   }
   
   @media ($desktop-widths) {
     font-size: 50px;
     line-height: 57px;
-
     
     z-index: 10;
   }
@@ -88,9 +90,7 @@
   
   @media ($desktop-widths) {
     margin-top: -479px;
-     margin-bottom: 50px;
-    
-   
+    margin-bottom: 50px;   
   }
 }
 
@@ -135,12 +135,11 @@
   
   @media ($tablet-widths) {
     width: 292px;
-    
     padding-top: 32px;
-  padding-bottom: 32px;
+    padding-bottom: 32px;
   
- font-size: 18px;
-  text-align: center;
+    font-size: 18px;
+    text-align: center;
   }
 }
 
@@ -153,11 +152,9 @@
     
     width: 334px;
     height: 404px;
-     outline: 1px solid red;
   }
 
   @media ($desktop-widths) {
-    
     width: 525px;
     height: 636px;
     margin-top: -166px;

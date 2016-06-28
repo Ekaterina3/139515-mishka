@@ -10,7 +10,7 @@
   @media ($desktop-widths) {
     width: 1050px;
     min-height: 457px;
-    padding: 0 50px;  outline: 1px solid red;
+    padding: 0 50px;
   }
 }
 
@@ -35,27 +35,23 @@
 }
 
 .contacts__title {
-  @include basic-font($font-family, 24px, 30px, bold, $font-color);
-  
   margin-bottom: 28px;
   
-   @media ($tablet-widths) {
-     
-      @include basic-font($font-family, 40px, 50px, bold, $font-color);
-     
+  @include basic-font($font-family, 24px, 30px, bold, $font-color);
+  
+  @media ($tablet-widths) {
+    @include basic-font($font-family, 40px, 50px, bold, $font-color);
   }
   
-   @media ($tablet-widths) {
-     
-      @include basic-font($font-family, 50px, 57px, bold, $font-color);
-     
-     padding-top: 77px;
-     margin-bottom: 56px;
+  @media ($tablet-widths) {
+    padding-top: 77px;
+    margin-bottom: 56px;
+    
+    @include basic-font($font-family, 50px, 57px, bold, $font-color);
   }
 }
 
 .contacts__list {
-  outline: 1px solid blue;
   display: table;
   margin: 0;
   margin-bottom: 29px;
