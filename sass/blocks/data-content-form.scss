@@ -1,119 +1,311 @@
 .form-content__message {
-  @include basic-font;
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: normal;
+  margin-bottom: 25px;
+  
+  @include basic-font($font-family, 15px, 25px, $font-weight, $font-color);
 }
 
 .form__list {
   margin-bottom: 58px;
-}
-
-.form__item {
-  padding: 0;
-  border: none;
-  border-top: 1px solid #63d1bb;
   
   font-size: 0;
 }
 
-.form__title {
-  $font-color: #63d1bb;
-  
-  width: 64px;
+.form__item {
+  position: relative;
+}
+
+.form__title {  
+  box-sizing: border-box;
+  min-width: 64px;
   padding: 0;
+  padding-right: 20px;
+  margin-bottom: 35px;
   
-  font-family: $font-family;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: bold;
+  @include basic-font($font-family, 16px, 16px, bold, #63d1bb);  
   text-transform: uppercase;
-  color: $font-color;
+  
+  background-color: #ffffff;
+  
+  &::after {
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    content: "";
+    z-index: -1;
+    
+    width: 100%;
+    height: 1px;
+    
+    background-color: #63d1bb;
+  }
+}
+
+.form__tel .form__title,
+.form__email .form__title {
+    margin-bottom: 7px;
+  }
+
+.form__email .form__title {
+   margin-top: 5px;
+}
+
+.form__inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+  width: 100%;
 }
 
 .form__item label {  
-  @include basic-font;
-  font-size: 17px;
-  line-height: 19px;
-  font-weight: bold;
+  @include basic-font($font-family, 16px, 18px, bold, $font-color);
 }
 
-.form__type-input,
-.form__color-input {
-  display: none; /*Скрыты для кастомизации*/
-}
-
-.form__type-label, 
-.form__color-label {
-  display: block;
+.form__type label, 
+.form__color label {
   padding-left: 64px;
 }
 
-.form__input {
-  width: 260px;
-  height: 54px;
-  margin-bottom: 25px; /*временная величина отступа*/
+.form__type label {
+  margin-bottom: 31px;
+  
+  &:last-child {
+    margin-bottom: 45px;
+  }
+}
+
+.form__color label {
+  margin-bottom: 48px;
+}
+
+.form__item input {
+  height: 53px;
+  margin-bottom: 21px;
+  
   border: none;
   border-bottom: 2px solid #000000;
+  background-color: inherit;
+  
+  &:last-child {
+    margin-bottom: 36px;
+  }
+}
+
+.form__type input,
+.form__color input {
+  display: none;
 }
 
 .form__wishes {
-  width: 256px;
-  min-height: 145px;
+  box-sizing: border-box;
+  min-height: 149px;
+  margin-bottom: 58px;
+  
   border: 2px solid #000000;
 }
 
 .form__btn {
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
+  width: 258px;
+  background-color: #ffffff;
+}
+
+.form__info {
+  display: none;
 }
 
 @media ($tablet-widths) {
+  .form-content__message {
+    margin-bottom: 75px;
+    
+    font-size: 16px;
+    line-height: 30px;
+  }
+  
+  .form-content__message-line {
+    display: block;
+  }
   
   .form__item {
     display: flex;
-    
-    outline: 1px solid red;
-    
-//    padding-left: 167px;
-    border: none;
+    flex-direction: row;
   }
   
-  .form__item:nth-child(2),
-  .form__item:nth-child(4),
-  .form__item:nth-child(5){
-    background-color: #f1f1f1;
+  
+  .form__title {
+    width: 167px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: auto;
+    
+    text-align: center;
+    
+    background: none;
+    
+    &::after {
+      display: none;
+    }
   }
-//  
-//  .form__title {
-//
-//    
-//  }
+  
+  .form__item input:last-child {
+    margin-bottom: 0;
+  }
    
-  .form__type-label {
-//    padding-left: 81px;
+  .form__inner {
+    width: calc(100% - 167px);
   }
   
-  .form__color-label {
-////    width: 128px;
-//    padding-left: 82px;
+  .form__color .form__inner,
+  .form__name .form__inner {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
   }
   
-  .form__input[type="tel"],
-  .form__input[type="email"] {
-    width: 501px;
+  .form__item label {
+    font-size: 18px;
   }
   
-  .form__input {
-    width: 375px;
+  .form__type label {
+    padding-left: 81px; 
+    margin-bottom: 59px;
+    
+    &:last-child {
+      margin-bottom: 69px;
+    }
+  }
+
+  .form__color {
+    padding-top: 79px;
   }
   
-  .form__input[name="name"] {
-    width: 428px;
+  .form__color label {
+    box-sizing: border-box;
+    width: 239px;
+    margin-bottom: 59;
+    padding-left: 81px;
+    
+    &:nth-of-type(5), 
+    &:nth-of-type(6) {
+      margin-bottom: 79px;
+    }
   }
   
-//  .form__label {
-//    margin-right: 25px;
-//  }
+  .form__name {
+    padding-top: 48px;
+  }
   
+  .form__name .form__title {
+    margin-top: 20px;
+  }
+  
+  .form__name label {
+    margin-right: 25px;
+    margin-top: 20px;
+  }
+  
+  .form__name input {
+    min-width: 70%;
+    flex-grow: 1;
+    align-self: flex-start;
+    
+    &:last-child {
+      margin-bottom: 67px;
+    }
+  }
+  
+  .form__color,
+  .form__tel,
+  .form__email {
+    background-color: #f1f1f1;
+  }  
+  
+  .form__tel {
+    padding-top: 52px;
+    margin-bottom: 0;
+  }
+  
+   .form__tel .form__title {
+    margin-top: 20px;
+    margin-bottom: auto;
+  }
+  
+  .form__tel input {
+     margin-bottom: 0;
+  }
+  
+  .form__email {
+    padding-top: 22px;
+    padding-bottom: 67px;
+  }
+  
+  .form__email .form__title {
+    margin-top: 20px;
+     margin-bottom: auto;
+  }
+  
+  .form__wishes {
+    min-height: 142px;
+    margin-top: 65px;
+    margin-bottom: 53px;
+  }
+  
+  .form__add .form__title {
+     margin-top: 84px;
+  }
+  
+  .form__btn {
+    display: inline-block;
+    vertical-align: top;
+    width: 230px;
+  }
+  
+  .form__info {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 230px);
+    
+    text-align: right;
+    font-size: 16px;
+  }
+}
+
+@media ($desktop-widths) {
+  .form-content__message {
+    margin-left: 175px;
+  }
+  
+  .form__title {
+    width: 175px;
+  }
+  
+  .form__inner {
+    width: 700px;
+  }  
+  
+  .form__color .form__inner {
+    width: calc(100% - 175px);
+    justify-content: flex-start; 
+  }
+  
+  .form__color label {
+    width: 263px;
+  }
+  
+  .form__name input {
+    min-width: 80%;
+  }
+  
+  .form__wishes {
+    margin-bottom: 90px;
+  }
+  
+  .form__btn {
+    margin-left: 175px;
+  }
+  
+  .form__info {
+    margin-right: 175px;
+    width: calc(100% - 230px - 350px);
+  }
 }

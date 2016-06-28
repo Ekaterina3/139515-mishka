@@ -1,10 +1,10 @@
 @import "variables.scss";
 @import "mixins.scss";
+@import "fonts.scss";
 @import "blocks/btn.scss";
 @import "blocks/catalog-item.scss";
 @import "blocks/catalog-list.scss";
 @import "blocks/contacts.scss";
-@import "blocks/contacts-wrapper.scss";
 @import "blocks/data-content-catalog.scss";
 @import "blocks/data-content-form.scss";
 @import "blocks/data-content-index.scss";
@@ -21,3 +21,4 @@
 @import "blocks/reviews.scss";
 @import "blocks/slider.scss";
 @import "blocks/write-us.scss";
+@import "common-styles.scss";

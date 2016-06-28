@@ -1,27 +1,29 @@
 .reviews__title {
-  @include basic-font;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: bold;
-//  margin-bottom: 29px;//
+  @include basic-font($font-family, 24px, 30px, bold, $font-color);
+  
+  margin-bottom: 29px;
+  
+   @media ($tablet-widths) {     
+     @include basic-font($font-family, 40px, 50px, bold, $font-color);
+  }
+  
+   @media ($desktop-widths) {     
+     @include basic-font($font-family, 50px, 57px, bold, $font-color);
+  }
 }
 
 .reviews__item {
-  @include basic-font;
-  font-size: 14px;
-  line-height: 30px;
-  font-weight: normal;
-  
-  
+  font-size: 14px; 
 }
 
 .reviews__content {
   max-width: 700px;
-//  margin-bottom: 14px;//
+  margin-bottom: 14px;
 }
 
 .reviews__author-name {
   display: block;
+  
   font-weight: bold;
 }
 
@@ -34,19 +36,21 @@
   min-height: 457px;
   padding: 0 30px;
   margin: 0 auto;
-//  margin-bottom: 91px;
-    outline: 1px solid red;
+  margin-bottom: 91px;
   
   @media ($tablet-widths) {
     width: 668px;
     padding: 0 50px;
-    background: url("../../img/review@1x.jpg") no-repeat 0 0;
+    margin-bottom: 150px;
+    
+    background: url("../img/review@1x.jpg") no-repeat 0 0;
   }
 
   @media ($desktop-widths) {
     width: 1050px;
-    padding: 0 50px;
-    background: url("../../img/review@1x.jpg") no-repeat 50px 0;
+    margin-bottom: 162px;
+    
+    background: url("../img/review@1x.jpg") no-repeat 50px 0;
   }
 }
 
@@ -54,8 +58,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: baseline;
-  outline: 1px solid blue;
+  
+  @media ($tablet-widths) {
+    padding-top: 79px;
+  }
   
   @media ($desktop-widths) {
     padding-left: 175px;
@@ -66,8 +72,7 @@
     order: 1;
   }
 
-  @media ($desktop-widths) {
-    order: 1;
+  @media ($desktop-widths) {    
     width: 100%;
   }
 }
@@ -78,13 +83,39 @@
 }
 
 .reviews__nav {
+  margin-top: 28px;
+  margin-bottom: 38px;
+  
+  font-size: 0;
+  
   @media ($tablet-widths) {
     align-self: flex-end;
-    margin-top: -30px;
-  }
-  @media ($desktop-widths) {
-    align-self: flex-end;
-    margin-top: -30px;
+    margin-top: -60px;
+    margin-bottom: 0;
   }
 }
 
+.reviews__nav button {
+  width: 130px;/*Временная величина*/
+  height: 52px;
+}
+@media ($tablet-widths) {
+ .reviews__write {
+    width: 175px;
+    margin-bottom: 45px;
+  }
+  
+  .reviews__item {
+    font-size: 16px; 
+  }
+  
+  .reviews__content {
+    max-width: 700px;
+    margin-bottom: 11px;
+  }
+  
+  .reviews__nav button {
+    width: 87px;/*Временная величина*/
+    height: 52px;
+  }
+}

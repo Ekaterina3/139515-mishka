@@ -1,6 +1,7 @@
 .popular-goods {
   display: flex;
   flex-direction: column;
+  
   margin-bottom: 72px;
   
   @media ($tablet-widths) {
@@ -8,153 +9,154 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    
+    margin-bottom: 123px;
   }
   
   @media ($desktop-widths) {
-    padding-left: 175px;
     justify-content: flex-start;
+    
+    padding-left: 175px;
+    padding-top: 53px;
+    margin-bottom: 163px;
   }
 }
 
 .popular-goods__title {
-  @include basic-font;
+  margin-bottom: 7px;
+  
   font-size: 24px;
-  line-height: 30px;
   font-weight: bold;
-  margin: 0;
-//  margin-bottom: 7px;
   
   @media ($tablet-widths) {
+    margin-bottom: 56px;
+    
     font-size: 40px;
-    line-height: 50px;outline: 1px solid red;
+    line-height: 50px;
   }
   
   @media ($desktop-widths) {
     font-size: 50px;
     line-height: 57px;
+    
     z-index: 10;
   }
 }
 
 .popular-goods__subtitle {
-  $font-color: #63d1bb;
-  font-family: $font-family;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: bold;
+  @include basic-font($font-family, 16px, 16px, bold, #63d1bb);
   text-transform: uppercase;
-  color: $font-color;
-//  margin-bottom: 26px;
+ 
+  margin-bottom: 26px;
   
   @media ($tablet-widths) {
     width: 70px; 
+    margin-top: 6px;
     margin-right: 28px;
-    align-self: center;
+        
     text-align: center;
   }
   
   @media ($desktop-widths) {
-    width: 70px; 
+    order: -1;
+    
     margin-left: -130px;
     margin-right: 60px;
-    align-self: center;
-    text-align: center;
-    order: -1;
+    margin-top: 15px;
   }
 }
 
 .popular-goods__content {
   display: flex;
-  width: 100%;
   flex-direction: column;
   flex-wrap: wrap;
+  
+  width: 100%;
 }
 
 .popular-goods__description {
-  @include basic-font;
   font-size: 14px;
   line-height: 24px;
-  font-weight: normal;outline: 1px solid red;
-//  margin-bottom: 18px;
+  margin-bottom: 9px;
   
   @media ($tablet-widths) {
     width: 292px; 
+    margin-bottom: 39px;
+    margin-top: -412px;
+    
     font-size: 16px;
     line-height: 30px;
   }
   
   @media ($desktop-widths) {
-    width: 292px; 
-    font-size: 16px;
-    line-height: 30px;
+    margin-top: -479px;
+    margin-bottom: 50px;   
   }
 }
 
 .popular-goods__parameters {
-  @include basic-font;
+  width: 260px;
+  margin-bottom: 23px;
+  
   font-size: 14px;
   line-height: 20px;
-  font-weight: normal;outline: 1px solid red;
-//  margin-bottom: 28px;
   
   @media ($tablet-widths) {
-    width: 292px; 
-    font-size: 16px;
-    line-height: 30px;
+    width: 292px;
+    
+    font-size: 15px;
   }
   
-  @media ($desktop-widths) {
-    width: 292px; 
-    font-size: 16px;
-    line-height: 30px; 
+   @media ($desktop-widths) {
+    margin-bottom: 79px;
   }
+}
+
+.popular-goods__parameters td {
+  padding-top: 9px;
+  padding-bottom: 10px;
+  
+  border-bottom: 1px solid #000;
+}
+
+.popular-goods__field {
+  width: 98px;
 }
 
 .popular-goods__price {
   display: block;
+  box-sizing: border-box;
+  width: 260px;
+  padding-top: 26px;
+  padding-bottom: 24px;
   
-  @include basic-font;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: bold;
+  @include basic-font($font-family, 16px, 24px, bold, $font-color);
   text-align: center;
   
   @media ($tablet-widths) {
     width: 292px;
-  }
+    padding-top: 32px;
+    padding-bottom: 32px;
   
-  @media ($desktop-widths) {
-    width: 292px;
+    font-size: 18px;
+    text-align: center;
   }
 }
 
 .popular-goods__icon {
+  height: 315px;
+  
   @media ($tablet-widths) {
+    align-self: flex-end;
+    order: -1;
+    
     width: 334px;
     height: 404px;
-    align-self: flex-end;
-    margin-top: -250px;
-    order: 1; outline: 1px solid red;
   }
 
   @media ($desktop-widths) {
-    order: 1;
     width: 525px;
     height: 636px;
-    margin-top: -323px;
-  }
-}
-
-.popular-goods__icon img {
-  width: 100%;
-  height: auto;
-}
-
-.popular-goods__order-btn {
-  display: block;
-  text-align: center;
-  
-   @media ($tablet-widths) {
-    width: 292px;
+    margin-top: -166px;
   }
 }

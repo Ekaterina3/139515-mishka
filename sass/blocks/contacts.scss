@@ -1,18 +1,33 @@
-
 .contacts {
-  max-width: 350px;
-  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   
-  @include basic-font;
-  font-size: 14px;
-  line-height: 30px;
-  font-weight: normal;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 39px;
+
+  @media ($desktop-widths) {
+    width: 1050px;
+    min-height: 457px;
+    padding: 0 50px;
+  }
+}
+
+.contacts-wrapper {
+  width: 260px;
+  padding: 0 30px;
+  margin: 0 auto;
+  
+  @include basic-font($font-family, 14px, 30px, $font-weight, $font-color);
   
   @media ($tablet-widths) {
+    width: 668px;
     padding: 0 50px;
   }
 
   @media ($desktop-widths) {
+    width: 350px;
     margin-left: 175px;
     padding: 0;
   }
@@ -20,30 +35,36 @@
 }
 
 .contacts__title {
-  @include basic-font;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: bold;
   margin-bottom: 28px;
-}
-
-.contacts__value a {
-  text-decoration: none;
-  color: $font-color;
+  
+  @include basic-font($font-family, 24px, 30px, bold, $font-color);
+  
+  @media ($tablet-widths) {
+    @include basic-font($font-family, 40px, 50px, bold, $font-color);
+  }
+  
+  @media ($tablet-widths) {
+    padding-top: 77px;
+    margin-bottom: 56px;
+    
+    @include basic-font($font-family, 50px, 57px, bold, $font-color);
+  }
 }
 
 .contacts__list {
-  outline: 1px solid blue;
   display: table;
   margin: 0;
+  margin-bottom: 29px;
   
  @media ($tablet-widths) and ($tablet-widths-max) {
    width: 668px; 
+   
    font-size: 0;
   }
   
   @media ($desktop-widths) {
     font-size: 16px;
+    margin-bottom: 75px;
   }
 }
 
@@ -52,9 +73,10 @@
   
   @media ($tablet-widths) and ($tablet-widths-max) {
     display: inline-block;
+    vertical-align: top;
     width: 334px;
-    font-size: 16px;
-    vertical-align: top;    
+    
+    font-size: 16px;     
   }
 }
 
@@ -70,7 +92,12 @@
     padding-right: 29px;
   }
 }
+
 .contacts__value {
   display: table-cell;
   max-width: 207px;
+}
+
+.contacts__row:first-child .contacts__value {
+  padding-bottom: 32px;
 }

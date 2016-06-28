@@ -1,0 +1,46 @@
+body {
+  @include basic-font($font-family, 16px, 30px, $font-weight, $font-color);
+  margin: 0;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  border: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  li {
+    margin: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000000; 
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
