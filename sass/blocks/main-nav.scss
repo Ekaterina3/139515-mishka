@@ -8,6 +8,8 @@
   
   font-size: 14px;
   line-height: 24px;
+  
+  background-color: #ffffff;
 }
 
 .main-nav__list {
@@ -32,18 +34,15 @@
   font-size: 16px;
   font-weight: bold;
   
-   border-bottom: 1px solid #000;
+  border-top: 1px solid #000; /*#e7e7e7*/
 }
 
 .main-nav__logo a {
-  height: 77px;
+  height: 79px;
   padding: 0;
   padding-top: 20px;
   
   text-align: center;
-  
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;  
 }
 
 @media ($mobile-widths-only) {
@@ -124,6 +123,8 @@
   .main-nav__wrapper {
     display: flex;
     flex-direction: column;
+    
+    padding: 0 50px;
   }
   
   .main-nav__item a {
@@ -147,28 +148,32 @@
     margin-bottom: -60px;
   }
   
-  .main-nav__search {
+  .main-nav__item--search {
     order: -2;
     
     margin-left: auto;
   }
   
-   .main-nav__search a {
-    width: 82px;
+   .main-nav__item--search a {
+    width: 83px;
     min-height: 88px;
     
     font-size: 0; 
+     
+      border-left: 1px solid #000;
   }
   
-  .main-nav__basket {
+  .main-nav__item--basket {
     order: -1;
   }
   
-  .main-nav__basket a {
-    width: 265px;
+  .main-nav__item--basket a {
+    width: 264px;
     min-height: 88px;
     
     text-align: right;
+    
+    border-left: 1px solid #000;
   }
   
   .main-nav__logo {
@@ -181,6 +186,12 @@
     min-height: 88px;
     
     border: none;
+  }
+  
+  
+  .main-nav__item--catalog a,
+  .main-nav__item--knitting a {
+    font-size: 14px;
   }
 }
 
@@ -207,7 +218,6 @@
     order: 4;
     
     max-width: 800px;
-    margin-left: 50px;
   }
   
    .main-nav__info {
@@ -227,41 +237,50 @@
   }
   
   .main-nav__item a {
-    width: 239px;
+    min-width: 189px;
     min-height: 88px;
-    padding-left: 50px;
   }
-  
-   .main-nav__item:nth-child(3) a {
+
+  .main-nav__item--catalog a {
+    font-size: 16px;
+    border-right: 1px solid #000;
+  }
+   .main-nav__item--knitting a {
+   
     padding-left: 35px;
+     font-size: 16px;
   }
   
-  .main-nav__search {
+  .main-nav__item--search {
     order: 2;
     
-    margin-left: auto;
+    margin-left: 101px;
   }
   
-  .main-nav__search a {
+  .main-nav__item--search a {
+    min-width: 0;
     width: 84px;
   }
   
-  .main-nav__basket {
+  .main-nav__item--basket {
     order: 3;
   }
   
-   .main-nav__basket a {
-    width: 316px;
+   .main-nav__item--basket a {
+    min-width: 0;
+     width: 267px;
+     
   }
   
   .main-nav__logo {
     order: 1;
     
     margin: 0;
-    margin-left: 24px; /*временное значение*/
+    margin-left: auto;
   }
   
   .main-nav__logo a {
+    min-width: 0;
     width: 150px;
     padding-left: 0;
   }

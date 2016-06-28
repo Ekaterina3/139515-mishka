@@ -1,5 +1,5 @@
 .features {
-  margin-bottom: 60px;
+  margin-bottom: 59px;
   outline: 1px solid red;
 }
 
@@ -10,20 +10,42 @@
 }
 
 .features__title {
-  margin: 0;
+  margin-bottom: 27px;
   
   @include basic-font($font-family, 24px, 30px, bold, $font-color);
+  
+     @media ($tablet-widths) {
+     
+      @include basic-font($font-family, 40px, 50px, bold, $font-color);
+  }
 }
 
 .features__item {
   width: 260px;
-  min-height: 100px; /*временная высота для сетки*/
+  padding-top: 61px;
+  margin-bottom: 25px; outline: 1px solid blue;
   
-  @include basic-font($font-family, 16px, auto, bold, $font-color);
+  @include basic-font($font-family, 16px, 18px, bold, $font-color);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media ($tablet-widths) {
+  .features {
+  margin-bottom: 78px;
+}
+  
+  .features__title {
+  margin-bottom: 42px;
+  }
+  
   .features__item {
+    width: 334px;
+    margin-bottom: 45px;
+    
+    @include basic-font($font-family, 20px, 24px, bold, $font-color);
     
     &:first-child {
       order: -3;
@@ -35,6 +57,7 @@
     
     &:nth-child(3) {
       order: 1;
+      margin-bottom: 0;
     }
     
     &:nth-child(6) {
@@ -46,5 +69,16 @@
 @media ($desktop-widths) {
   .features {
     padding: 0 175px;
+    margin-bottom: 69px;
+  }
+  
+  .features__title {
+    margin-bottom: 40px;
+    
+    @include basic-font($font-family, 50px, 57px, bold, $font-color);
+  }
+  
+  .features__item {
+    width: 350px;
   }
 }
