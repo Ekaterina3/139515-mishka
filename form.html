@@ -71,7 +71,7 @@
           </fieldset>
           <fieldset>
             <div class="form__item form__item--color">
-              <h3 class="form__title">Цвет</h3>
+              <b class="form__title">Цвет</b>
               <div class="form__inner">
                 <input type="checkbox" name="white" id="white" checked>
                 <label for="white">Белый</label>
@@ -90,7 +90,7 @@
           </fieldset>
           <fieldset>
             <div class="form__item form__item--name">
-              <h3 class="form__title">ФИО</h3>
+              <b class="form__title">ФИО</b>
               <div class="form__inner">
                 <label for="surname">Фамилия:</label>
                 <input type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
@@ -103,23 +103,27 @@
           </fieldset>
           <fieldset>
             <div class="form__item form__item--tel">
-              <h3 class="form__title">Тел</h3>
+              <b class="form__title">Тел</b>
               <div class="form__inner">
-                <input type="tel" name="tel" pattern="\+7\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" placeholder="+7 XXX XX XX" required>
+                <label class="form__label form__label--phone">
+                  <input type="tel" name="tel" pattern="\+7\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" placeholder="+7 XXX XX XX" required>
+                </label>
               </div>
             </div>
           </fieldset>
           <fieldset>
             <div class="form__item form__item--email">
-              <h3 class="form__title">e-mail</h3>
+              <b class="form__title">e-mail</b>
               <div class="form__inner">
-                <input type="email" name="email" placeholder="Ваш e-mail" required>
+                <label class="form__label form__label--email">
+                  <input type="email" name="email" placeholder="Ваш e-mail" required>
+                </label>
               </div>
             </div>
           </fieldset>
           <fieldset>
             <div class="form__item form__item--add">
-              <h3 class="form__title">Доп</h3>
+              <b class="form__title">Доп</b>
               <div class="form__inner">
                 <textarea class="form__item--wishes" name="wishes" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </div>

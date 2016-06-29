@@ -71,7 +71,6 @@
 }
 
 .contacts__list {
-  display: table;
   margin: 0;
   margin-bottom: 29px;
   
@@ -87,9 +86,7 @@
   }
 }
 
-.contacts__row {
-  display: table-row;
-  
+.contacts__row {  
   @media ($tablet-widths) and ($tablet-widths-max) {
     display: inline-block;
     vertical-align: top;
@@ -100,13 +97,13 @@
 }
 
 .contacts__field {
-  display: table-cell;
   min-width: 78px;
+  vertical-align: top;
 }
 
 .contacts__value {
-  display: table-cell;
-  max-width: 207px;
+  max-width: 208px;
+  vertical-align: top;
 }
 
 .contacts__value--email {
