@@ -116,7 +116,7 @@
   padding-top: 9px;
   padding-bottom: 10px;
   
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ececec;
 }
 
 .popular-goods__field {
@@ -144,6 +144,7 @@
 }
 
 .popular-goods__icon {
+  width: 260px;
   height: 315px;
   
   @media ($tablet-widths) {

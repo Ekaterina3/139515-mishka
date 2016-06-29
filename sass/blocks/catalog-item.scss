@@ -5,7 +5,8 @@
   align-content: flex-start;
   
   margin-bottom: 30px;
-  outline: 1px solid blue;
+    
+  border: 1px solid #ececec;
   
   @media ($tablet-widths) and ($tablet-widths-max) {
     height: 334px;
@@ -20,14 +21,14 @@
 
 .catalog-item__icon {
   width: 260px;
-  height: 195px; outline: 1px solid red;
+  height: 195px;
   margin-bottom: 28px;
   
   @media ($tablet-widths) {
     width: 334px;
     min-height: 334px;
     margin-right: 27px;
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
   
   @media ($desktop-widths) {
@@ -73,6 +74,7 @@
 }
 
 .catalog-item__price {
+  position: relative;
   display: block;
   margin-left: 29px;
   padding-top: 24px;
@@ -82,14 +84,34 @@
   
   @media ($tablet-widths) {
     margin-top: auto;
-    margin-left: 34px;
+    margin-left: 7px;
     
     font-size: 16px;
   }
   
-   @media ($tablet-widths) {
+   @media ($desktop-widths) {
     margin-left: 29px;
+  }
+}
 
+.catalog-item__price:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  display: block;
+  content: "";
+  width: 204px;
+  height: 1px;
+  
+  background-color: #ececec;
+  
+  @media ($tablet-widths) {
+    width: 269px;
+  }
+  
+  @media ($tablet-widths) {
+    width: 257px;
   }
 }
 

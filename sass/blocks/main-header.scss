@@ -1,5 +1,6 @@
 .main-header {
   margin-bottom: 30px;
+//  background-color: $main-header-bg;
   
   @media ($tablet-widths) {
     margin-bottom: 50px;
@@ -25,13 +26,30 @@
 
 .main-header__intro {  
   min-height: 176px;
-  border-top: 1px solid #000; /*#e7e7e7*/
+  border-top: 1px solid #ececec;
   
   background-color: $main-header-bg;
 }
 
 .main-header__intro--index {  
-  background: $main-header-bg url("../img/hero-mobile@1x.jpg") no-repeat center top;
+  background-color: $main-header-bg;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  
+  @media ($retina-dpi), ($retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+  }
+  
+  @media ($tablet-widths) {
+    background-image: url("../img/hero-desktop@1x.jpg");
+    
+    @media ($retina-dpi), ($retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
+  }
 }
 
 .main-header__title {

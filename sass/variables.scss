@@ -7,3 +7,9 @@ $mobile-widths-only: "max-width: 767px";
 $tablet-widths: "min-width: 768px";
 $tablet-widths-max: "max-width: 1199px";
 $desktop-widths: "min-width: 1200px";
+
+$retina: "min-resolution: 144dpi, min-resolution: 1.5dppx";
+/*@media ($retina) не работает (пишет unclosed parenthesis in media query expression). Ошибка в синтаксисе значения переменной?*/
+
+$retina-dpi: "min-resolution: 144dpi";
+$retina-dppx: "min-resolution: 1.5dppx";
