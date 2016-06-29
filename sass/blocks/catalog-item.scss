@@ -82,15 +82,40 @@
   
   @include basic-font($font-family, 14px, 24px, bold, $font-color);
   
+  &:after {
+    position: absolute;
+    top: 25px;
+    right: 27px;
+    
+    display: block;
+    content: "";
+    width: 21px;
+    height: 18px;
+    background-image: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+  }
+  
   @media ($tablet-widths) {
     margin-top: auto;
     margin-left: 7px;
     
     font-size: 16px;
+    
+    &:after {
+      position: absolute;
+      top: 25px;
+      left: 239px;
+    }
   }
   
    @media ($desktop-widths) {
     margin-left: 29px;
+     
+     &:after {
+      position: absolute;
+      top: 25px;
+      right: 27px;
+      }
   }
 }
 

@@ -115,14 +115,34 @@
 }
 
 .main-header__inner-nav-list {
+  position: relative;
   font-size: 0;
   
   @media ($tablet-widths) {
     padding: 0 50px;
+    
+    &:after {
+    position: absolute;
+      top: 99px;
+      left: 0;
+      
+      display: block;
+      content: "";
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 24px;
+      background-position: bottom left;
   }
-  
+      
   @media ($desktop-widths) {
-    padding: 0 50px;
+    &:after {
+      top: 103px;
+      height: 34px;
+      background-size: 100% 34px;
+      }
+    }
   }
 }
 
@@ -141,6 +161,7 @@
   
   @media ($tablet-widths) {
     width: 334px;
+    min-height: 117px;
   }
 
   @media ($desktop-widths) {
@@ -151,8 +172,24 @@
 
 .main-header__inner-nav-item--interior {
   background-color: #63d1bb;
+  background-image: url("../img/icon-interior.svg");
+  background-repeat: no-repeat;
+  background-size: 40px 62px;
+  background-position: top 23px right 36px;
+  
+  @media ($tablet-widths) {
+    background-position: top 30px right 36px;
+  }
 }
 
 .main-header__inner-nav-item--toys {
   background-color: #56c3b2;
+  background-image: url("../img/icon-toy.svg");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  background-position: top 21px right 27px;
+  
+  @media ($tablet-widths) {
+    background-position: top 31px right 36px;
+  }
 }

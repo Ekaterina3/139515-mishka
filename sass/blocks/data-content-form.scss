@@ -4,7 +4,7 @@
   @include basic-font($font-family, 15px, 25px, $font-weight, $font-color);
 }
 
-.form__list {
+.form {
   margin-bottom: 58px;
   
   font-size: 0;
@@ -12,6 +12,8 @@
 
 .form__item {
   position: relative;
+  
+  font-size: 16px;
 }
 
 .form__title {  
@@ -40,12 +42,12 @@
   }
 }
 
-.form__tel .form__title,
-.form__email .form__title {
+.form__item--tel .form__title,
+.form__item--email .form__title {
     margin-bottom: 7px;
   }
 
-.form__email .form__title {
+.form__item--email .form__title {
    margin-top: 5px;
 }
 
@@ -61,12 +63,12 @@
   @include basic-font($font-family, 16px, 18px, bold, $font-color);
 }
 
-.form__type label, 
-.form__color label {
+.form__item--type label, 
+.form__item--color label {
   padding-left: 64px;
 }
 
-.form__type label {
+.form__item--type label {
   position: relative;
   
   margin-bottom: 31px;
@@ -93,11 +95,11 @@
   }
 }
 
-.form__type input:checked + label:before {
+.form__item--type input:checked + label:before {
     background-color: #62d1ba;
 }
 
-.form__color label {
+.form__item--color label {
   position: relative;
   
   margin-bottom: 48px;
@@ -117,7 +119,7 @@
   }
 }
 
-.form__color input:checked + label:before {
+.form__item--color input:checked + label:before {
   background-image: url("../img/icon-tick.svg");
   background-size: 22px 17px;
   background-repeat: no-repeat;
@@ -131,18 +133,20 @@
   border: none;
   border-bottom: 2px solid #000000;
   background-color: inherit;
+  outline: none;
   
   &:last-child {
     margin-bottom: 36px;
   }
 }
 
-.form__type input,
-.form__color input {
+
+.form__item--type input,
+.form__item--color input {
   display: none;
 }
 
-.form__wishes {
+.form__item--wishes {
   box-sizing: border-box;
   min-height: 149px;
   margin-bottom: 58px;
@@ -175,6 +179,8 @@
   .form__item {
     display: flex;
     flex-direction: row;
+    
+    font-size: 18px;
   }
   
   
@@ -201,8 +207,8 @@
     width: calc(100% - 167px);
   }
   
-  .form__color .form__inner,
-  .form__name .form__inner {
+  .form__item--color .form__inner,
+  .form__item--name .form__inner {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
@@ -212,7 +218,7 @@
     font-size: 18px;
   }
   
-  .form__type label { 
+  .form__item--type label { 
     padding-left: 81px; 
     margin-bottom: 59px;
     
@@ -222,14 +228,11 @@
   }
   
   
-  
-  
-
-  .form__color {
+  .form__item--color {
     padding-top: 79px;
   }
   
-  .form__color label {
+  .form__item--color label {
     box-sizing: border-box;
     width: 239px;
     margin-bottom: 59;
@@ -241,20 +244,20 @@
     }
   }
   
-  .form__name {
+  .form__item--name {
     padding-top: 48px;
   }
   
-  .form__name .form__title {
+  .form__item--name .form__title {
     margin-top: 20px;
   }
   
-  .form__name label {
+  .form__item--name label {
     margin-right: 25px;
     margin-top: 20px;
   }
   
-  .form__name input {
+  .form__item--name input {
     min-width: 70%;
     flex-grow: 1;
     align-self: flex-start;
@@ -264,43 +267,43 @@
     }
   }
   
-  .form__color,
-  .form__tel,
-  .form__email {
+  .form__item--color,
+  .form__item--tel,
+  .form__item--email {
     background-color: #f1f1f1;
   }  
   
-  .form__tel {
+  .form__item--tel {
     padding-top: 52px;
     margin-bottom: 0;
   }
   
-   .form__tel .form__title {
+   .form__item--tel .form__title {
     margin-top: 20px;
     margin-bottom: auto;
   }
   
-  .form__tel input {
+  .form__item--tel input {
      margin-bottom: 0;
   }
   
-  .form__email {
+  .form__item--email {
     padding-top: 22px;
     padding-bottom: 67px;
   }
   
-  .form__email .form__title {
+  .form__item--email .form__title {
     margin-top: 20px;
      margin-bottom: auto;
   }
   
-  .form__wishes {
+  .form__item--wishes {
     min-height: 142px;
     margin-top: 65px;
     margin-bottom: 53px;
   }
   
-  .form__add .form__title {
+  .form__item--add .form__title {
      margin-top: 84px;
   }
   
@@ -333,20 +336,20 @@
     width: 700px;
   }  
   
-  .form__color .form__inner {
+  .form__item--color .form__inner {
     width: calc(100% - 175px);
     justify-content: flex-start; 
   }
   
-  .form__color label {
+  .form__item--color label {
     width: 263px;
   }
   
-  .form__name input {
+  .form__item--name input {
     min-width: 80%;
   }
   
-  .form__wishes {
+  .form__item--wishes {
     margin-bottom: 90px;
   }
   
@@ -359,7 +362,41 @@
     width: calc(100% - 230px - 350px);
   }
 }
-//
-//.form__item::-webkit-input-placeholder {
-//  color: #000000; 
-//}
+
+.form__item ::-webkit-input-placeholder {
+  color: #d2d2d2;
+  padding-left: 18px;
+  
+//  background-image: url("../img/icon-phone.svg");
+//  background-repeat: no-repeat;
+//  background-size: 22px 22px;
+//  background-position: bottom right 8px;
+}
+
+.form__item :-moz-placeholder {
+  color: #d2d2d2;
+  padding-left: 18px;
+}
+
+.form__item :-ms-input-placeholder {
+  color: #d2d2d2;
+  padding-left: 18px;
+}
+
+.form__item--tel form__inner {
+  position: relative;
+  
+    &:after {
+    position: absolute;
+    top: 0px;
+    left: 00px;
+    
+    display: block;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+  
+  }
+}
