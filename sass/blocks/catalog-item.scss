@@ -10,11 +10,11 @@
   
   @media ($tablet-widths) and ($tablet-widths-max) {
     height: 334px;
-    margin-bottom: 54px;
+    margin-bottom: 52px;
   }
   
   @media ($desktop-widths) {
-    margin-bottom: 58px;
+    margin-bottom: 55px;
     min-height: 659px;
   }
 }
@@ -43,42 +43,54 @@
 }
 
 .catalog-item h3 {
-  max-width: 180px;
- line-height: 0;
+  max-width: 185px;
+  line-height: 0;
   margin-left: 29px;
-   @media ($tablet-widths) {
+  
+  @media ($tablet-widths) {
    margin-top: 26px;
-     max-width: 200px;
+    margin-left: 0;
+   max-width: 217px;
+  }
+  
+  @media ($desktop-widths) {
+    margin-left: 27px;
+    max-width: 240px;
+   
   }
 }
 
 .catalog-item__name {
   @include basic-font($font-family, 16px, 24px, bold, $font-color);
+  
   @media ($tablet-widths) {
     font-size: 18px;
-   
   }
 }
 
 .catalog-item__parameters {
   @include basic-font($font-family, 14px, 30px, $font-weight, $font-color);
   margin-top: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   margin-left: 29px;
   
   @media ($tablet-widths) {
+    
+    margin-left: 0;
     font-size: 15px;
-     margin-top: 7px;
-
+  }
+  
+   @media ($desktop-widths) {
+     margin-left: 27px;
   }
 }
 
 .catalog-item__price {
   position: relative;
   display: block;
-  margin-left: 29px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  margin-left: 27px;
+  padding-top: 23px;
+  padding-bottom: 26px;
   
   @include basic-font($font-family, 14px, 24px, bold, $font-color);
   
@@ -103,13 +115,14 @@
     
     &:after {
       position: absolute;
-      top: 25px;
-      left: 239px;
+      top: 21px;
+      left: 248px;
     }
   }
   
    @media ($desktop-widths) {
-    margin-left: 29px;
+    margin-left: 27px;
+    padding-top: 20px;
      
      &:after {
       position: absolute;
@@ -135,8 +148,9 @@
     width: 269px;
   }
   
-  @media ($tablet-widths) {
+  @media ($desktop-widths) {
     width: 257px;
+    top: -4px;
   }
 }
 

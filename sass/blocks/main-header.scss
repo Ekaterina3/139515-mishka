@@ -75,7 +75,7 @@
   
   @media ($tablet-widths) {
     padding-top: 152px;
-    padding-bottom: 374px;
+    padding-bottom: 373px;
   }
   @media ($tablet-widths) {
     padding-bottom: 360px;
@@ -84,23 +84,23 @@
 }
 
 .main-header__title--catalog {
-  padding-top: 71px;
-  padding-bottom: 70px;
+  padding-top: 69px;
+  padding-bottom: 80px;
   
   @media ($tablet-widths) {
-    padding-top: 95px;
-    padding-bottom: 78px;
+    padding-top: 92px;
+    padding-bottom: 80px;
   }
   
   @media ($desktop-widths) {
-    padding-top: 101px;
-    padding-bottom: 96px;
+    padding-top: 94px;
+    padding-bottom: 101px;
   }
 }
 
 .main-header__title--form {
-   padding-top: 76px;
-   padding-bottom: 75px;
+   padding-top: 74px;
+   padding-bottom: 84px;
   
   @media ($tablet-widths) {
     padding-top: 95px;
@@ -108,8 +108,8 @@
   }
   
   @media ($desktop-widths) {
-    padding-top: 101px;
-    padding-bottom: 96px;
+    padding-top: 94px;
+    padding-bottom: 101px;
   }
 }
 

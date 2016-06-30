@@ -4,7 +4,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   
+  @media ($tablet-widths) {
+    margin-top: 82px;
+  }
+  
   @media ($desktop-widths) {
     flex-direction: row;
+    margin-top: 130px;
   }
 }

@@ -5,7 +5,7 @@
 }
 
 .form {
-  margin-bottom: 58px;
+  margin-bottom: 63px;
   
   font-size: 0;
 }
@@ -21,7 +21,7 @@
   min-width: 64px;
   padding: 0;
   padding-right: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   
   @include basic-font($font-family, 16px, 16px, bold, #63d1bb);  
   text-transform: uppercase;
@@ -59,6 +59,14 @@
   width: 100%;
 }
 
+.form__item--color .form__inner {
+  margin-top: 30px;
+}
+
+.form__item--name .form__inner {
+  margin-top: 25px;
+}
+
 .form__item label {  
   @include basic-font($font-family, 16px, 18px, bold, $font-color);
 }
@@ -71,10 +79,10 @@
 .form__item--type label {
   position: relative;
   
-  margin-bottom: 31px;
+  margin-bottom: 35px;
   
   &:last-child {
-    margin-bottom: 45px;
+    margin-bottom: 38px;
   }
   
   &:before {
@@ -102,7 +110,7 @@
 .form__item--color label {
   position: relative;
   
-  margin-bottom: 48px;
+  margin-bottom: 46px;
   
   &:before {
     position: absolute;
@@ -136,7 +144,7 @@
   outline: none;
   
   &:last-child {
-    margin-bottom: 36px;
+    margin-bottom: 30px;
   }
 }
 
@@ -153,6 +161,7 @@
 .form__item--wishes {
   box-sizing: border-box;
   min-height: 149px;
+  margin-top: 30px;
   margin-bottom: 58px;
   
   border: 2px solid #000000;
@@ -169,8 +178,13 @@
 }
 
 @media ($tablet-widths) {
+  .form {
+    margin-bottom: 50px;
+  }
+  
   .form-content__message {
     margin-bottom: 75px;
+    padding-top: 29px;
     
     font-size: 16px;
     line-height: 30px;
@@ -194,7 +208,7 @@
     margin: 0;
     margin-bottom: auto;
     
-    text-align: center;
+    text-align: left;
     
     background: none;
     
@@ -229,31 +243,54 @@
     &:last-child {
       margin-bottom: 69px;
     }
+    
+    &:before {
+    top: -15px;
+
+    width: 19px;
+    height: 19px;
+
+    border: 15px solid #ffffff;
+    }
   }
   
   
   .form__item--color {
-    padding-top: 79px;
+    padding-top: 76px;
+  }
+  .form__item--color .form__inner {
+    margin-top: 0;
   }
   
   .form__item--color label {
     box-sizing: border-box;
     width: 239px;
-    margin-bottom: 59;
+    margin-bottom: 57px;
     padding-left: 81px;
     
     &:nth-of-type(5), 
     &:nth-of-type(6) {
       margin-bottom: 79px;
     }
+    
+    &:before {
+    top: -15px;
+  
+    width: 52px;
+    height: 49px;
+    }
   }
   
   .form__item--name {
-    padding-top: 48px;
+    padding-top: 42px;
   }
   
   .form__item--name .form__title {
     margin-top: 20px;
+  }
+  
+  .form__item--name .form__inner {
+    margin-top: 0;
   }
   
   .form__item--name label {
@@ -278,7 +315,7 @@
   }  
   
   .form__item--tel {
-    padding-top: 52px;
+    padding-top: 47px;
     margin-bottom: 0;
   }
   
@@ -292,7 +329,7 @@
   }
   
   .form__item--email {
-    padding-top: 22px;
+    padding-top: 20px;
     padding-bottom: 67px;
   }
   
@@ -328,12 +365,18 @@
 }
 
 @media ($desktop-widths) {
+  .form {
+    margin-bottom: 95px;
+  }
+  
   .form-content__message {
     margin-left: 175px;
+    padding-top: 53px;
   }
   
   .form__title {
     width: 175px;
+    text-align: center;
   }
   
   .form__inner {
@@ -349,8 +392,16 @@
     width: 263px;
   }
   
+  .form__item--name {
+    padding-top: 46px;
+  }
+  
   .form__item--name input {
     min-width: 80%;
+  }
+  
+  .form__item--email {
+    padding-top: 18px;
   }
   
   .form__item--wishes {
