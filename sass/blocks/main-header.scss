@@ -1,9 +1,8 @@
 .main-header {
-  margin-bottom: 30px;
-//  background-color: $main-header-bg;
+  margin-bottom: 27px;
   
   @media ($tablet-widths) {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
   
   @media ($desktop-widths) {
@@ -71,15 +70,15 @@
 
 .main-header__title--index {
   margin: 0 40px;
-  padding-top: 89px;
-  padding-bottom: 120px;
+  padding-top: 86px;
+  padding-bottom: 123px;
   
   @media ($tablet-widths) {
-    padding-top: 160px;
-    padding-bottom: 371px;
+    padding-top: 152px;
+    padding-bottom: 374px;
   }
   @media ($tablet-widths) {
-    padding-bottom: 358px;
+    padding-bottom: 360px;
   }
   
 }
@@ -123,7 +122,7 @@
     
     &:after {
     position: absolute;
-      top: 99px;
+      top: 106px;
       left: 0;
       
       display: block;
@@ -151,8 +150,8 @@
   vertical-align: middle;
   box-sizing: border-box;
   width: 320px;
-  padding-top: 28px;
-  padding-bottom: 27px;
+  padding-top: 26px;
+  padding-bottom: 29px;
   padding-left: 29px;
   padding-right: 165px;
   
@@ -162,6 +161,10 @@
   @media ($tablet-widths) {
     width: 334px;
     min-height: 117px;
+    padding-top: 29px;
+    padding-left: 38px;
+    
+    line-height: 28px;
   }
 
   @media ($desktop-widths) {
