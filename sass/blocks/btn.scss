@@ -3,8 +3,8 @@
   box-sizing: border-box;
   width: 260px;
   height: 52px;
-  padding-top: 17px;
-  padding-bottom: 19px;
+  padding-top: 16px;
+  padding-bottom: 20px;
   
   @include basic-font($font-family, 16px, 16px, bold, #444444);
   text-transform: uppercase;

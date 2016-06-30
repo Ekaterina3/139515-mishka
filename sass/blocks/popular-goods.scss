@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   
-  margin-bottom: 72px;
+  margin-bottom: 69px;
   
   &:after {
     position: absolute;
-    bottom: -45px;
+    bottom: -41px;
     left: 0;
     
     display: block;
@@ -25,11 +25,11 @@
     align-items: flex-start;
     justify-content: space-between;
     
-    margin-bottom: 123px;
+    margin-bottom: 116px;
     
     &:after {
       height: 16px;
-      bottom: -80px;
+      bottom: -67px;
       background-size: 100% 16px;
     }
   }
@@ -38,8 +38,8 @@
     justify-content: flex-start;
     
     padding-left: 175px;
-    padding-top: 53px;
-    margin-bottom: 163px;
+    padding-top: 55px;
+    margin-bottom: 156px;
     
      &:after {
       height: 26px;
@@ -56,13 +56,15 @@
   font-weight: bold;
   
   @media ($tablet-widths) {
-    margin-bottom: 56px;
+    margin-bottom: 58px;
     
     font-size: 40px;
     line-height: 50px;
   }
   
   @media ($desktop-widths) {
+    margin-left: -5px;
+    
     font-size: 50px;
     line-height: 57px;
     
@@ -78,8 +80,8 @@
   
   @media ($tablet-widths) {
     width: 70px; 
-    margin-top: 6px;
-    margin-right: 28px;
+    margin-top: 11px;
+    margin-right: 26px;
         
     text-align: center;
   }
@@ -87,7 +89,7 @@
   @media ($desktop-widths) {
     order: -1;
     
-    margin-left: -130px;
+    margin-left: -128px;
     margin-right: 60px;
     margin-top: 15px;
   }
@@ -104,11 +106,11 @@
 .popular-goods__description {
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 9px;
+  margin-bottom: 17px;
   
   @media ($tablet-widths) {
     width: 292px; 
-    margin-bottom: 39px;
+    margin-bottom: 37px;
     margin-top: -412px;
     
     font-size: 16px;
@@ -123,7 +125,7 @@
 
 .popular-goods__parameters {
   width: 260px;
-  margin-bottom: 23px;
+  margin-bottom: 28px;
   
   font-size: 14px;
   line-height: 20px;
@@ -135,35 +137,35 @@
   }
   
    @media ($desktop-widths) {
-    margin-bottom: 79px;
+    margin-bottom: 86px;
   }
 }
 
 .popular-goods__parameters td {
-  padding-top: 9px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 9px;
   
   border-bottom: 1px solid #ececec;
 }
 
 .popular-goods__field {
-  width: 98px;
+  width: 100px;
 }
 
 .popular-goods__price {
   display: block;
   box-sizing: border-box;
   width: 260px;
-  padding-top: 26px;
-  padding-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 26px;
   
   @include basic-font($font-family, 16px, 24px, bold, $font-color);
   text-align: center;
   
   @media ($tablet-widths) {
     width: 292px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 28px;
+    padding-bottom: 34px;
   
     font-size: 18px;
     text-align: center;
@@ -186,5 +188,12 @@
     width: 525px;
     height: 636px;
     margin-top: -166px;
+  }
+}
+
+.popular-goods__order-btn {
+   @media ($tablet-widths) {    
+    width: 292px;
+    padding-top: 15px;
   }
 }

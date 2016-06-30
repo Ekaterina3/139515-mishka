@@ -1,6 +1,10 @@
 .write-us {
   margin: 0 auto;
   
+  @media ($tablet-widths) {
+    width: 230px;
+  }
+  
   @media ($desktop-widths) {
     margin-left: 175px;
     margin-top: -52px;

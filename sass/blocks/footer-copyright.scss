@@ -5,7 +5,7 @@
   min-width: 260px;
   min-height: 80px;
   padding-left: 39px;
-  padding-top: 30px;
+  padding-top: 28px;
   
   border-top: 1px solid #e5e5e5;
   
@@ -15,7 +15,7 @@
     min-width: 182px;
     min-height: 34px;
     padding: 0;
-    margin-top: 58px;
+    margin-top: 53px;
     margin-bottom: 51px;
     
     border: none;
@@ -24,13 +24,17 @@
 
 .footer-copyright__icon {
   position: absolute;
-width: 40px;
-height: 47px;
-  top: calc(50% - 18px);
-  right: 39px;
+  width: 40px;
+  height: 47px;
+  top: 20px;
+  right: 33px;
   
   @media ($tablet-widths) {
-    top: -10px;
-    right: 0;
+    top: -7px;
+    right: -9px;
+  }
+  
+  @media ($desktop-widths) {
+    right: -5px;
   }
 }
