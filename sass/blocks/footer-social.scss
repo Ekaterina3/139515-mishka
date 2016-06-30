@@ -20,10 +20,26 @@
   height: 30px;
   margin-right: 28px;
   
-  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
   
   &:last-child {
     margin-right: 0;
+  }
+  
+  &--inst {
+    background-image: url("../img/icon-insta.svg");
+    background-size: 22px 21px;
+  }
+  
+  &--fb {
+    background-image: url("../img/icon-fb.svg");
+    background-size: 15px 28px;
+  }
+  
+  &--tw {
+    background-image: url("../img/icon-twitter.svg");
+    background-size: 24px 20px;
   }
 }
 

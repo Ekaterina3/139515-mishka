@@ -1,11 +1,13 @@
 .footer-copyright {
+  position: relative;
+  
   box-sizing: border-box;
   min-width: 260px;
   min-height: 80px;
   padding-left: 39px;
   padding-top: 30px;
   
-  border-top: 1px solid #000;
+  border-top: 1px solid #e5e5e5;
   
   @include basic-font($font-family, 18px, 18px, bold, $font-color);
   
@@ -17,5 +19,18 @@
     margin-bottom: 51px;
     
     border: none;
+  }
+}
+
+.footer-copyright__icon {
+  position: absolute;
+width: 40px;
+height: 47px;
+  top: calc(50% - 18px);
+  right: 39px;
+  
+  @media ($tablet-widths) {
+    top: -10px;
+    right: 0;
   }
 }

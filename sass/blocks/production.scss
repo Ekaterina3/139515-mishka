@@ -1,9 +1,14 @@
 .production {
+  
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   
   margin-bottom: 58px;
+  
+  border: 1px solid #ececec;
+  
+  
   
   @media ($tablet-widths) {
     margin-bottom: 63px;
@@ -16,16 +21,38 @@
 }
 
 .production__title {
+  position: relative;
+  
   @include basic-font($font-family, 16px, 24px, bold, $font-color);
   
+  padding-top: 25px;
   margin-bottom: 22px;
   margin-left: 90px;
   
+  &:after {
+    position: absolute;
+    top: 32px;
+    left: -57px;
+    
+    display: block;
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+  }
+  
   @media ($tablet-widths) {
     margin: 0 40px;
-     margin-bottom: 35px;
+    margin-bottom: 35px;
     padding-left: 66px;
+    padding-top: 0;
     font-size: 18px;
+    
+    &:after {
+      top: -6px;
+      left: 0;
+    }
   }
   
   @media ($desktop-widths) {
@@ -33,6 +60,11 @@
     padding-left: 0;
     padding-top: 98px;
     margin-left: 0;
+    
+    &:after {
+      top: 45px;
+      left: 0;
+    }
   }
 }
 
@@ -59,11 +91,12 @@
 }
 
 .production__video {
+  position: relative;
+  
   width: 100%;
   height: 150px;
   margin-bottom: 30px;
-  object-fit: inherit;
-  
+    
   @media ($tablet-widths) {
     height: 455px;
     
@@ -77,6 +110,23 @@
     margin-bottom: 0;
     
     order: -1;
+  }
+}
+
+.production__play-btn {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    
+    width: 101px;
+    height: 77px;
+    background-image: url("../img/icon-play.svg");
+    background-repeat: no-repeat;
+    background-size: 101px 77px;
+  
+  @media ($tablet-widths) {
+    top: calc(50% - 50px);
+    left:calc(50% - 38px)
   }
 }
 
