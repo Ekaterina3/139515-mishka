@@ -159,6 +159,7 @@
 }
 
 .form__label input {
+  box-sizing: border-box;
   width: 100%;
 }
 
@@ -330,7 +331,7 @@
   .form__item--color,
   .form__item--tel,
   .form__item--email {
-    background-color: #f1f1f1;
+    background-color: $form-bg;
   }  
   
   .form__item--tel {
@@ -345,11 +346,17 @@
   
   .form__item--tel input {
      margin-bottom: 0;
+    
+     background-color: $form-bg; /*для IE*/
   }
   
   .form__item--email {
     padding-top: 20px;
     padding-bottom: 67px;
+  }
+  
+  .form__item--email input {    
+    background-color: $form-bg; /*для IE*/
   }
   
   .form__item--email .form__title {
