@@ -67,6 +67,8 @@
   
   @media ($tablet-widths) {
     @include basic-font($font-family, 40px, 50px, bold, $font-color);
+    
+    margin-bottom: 51px;
   }
   
   @media ($desktop-widths) {
@@ -81,25 +83,26 @@
   margin: 0;
   margin-bottom: 29px;
   
+  font-size: 0;
+  
  @media ($tablet-widths) and ($tablet-widths-max) {
    width: 668px; 
    
-   font-size: 0;
   }
   
   @media ($desktop-widths) {
     font-size: 16px;
     margin-bottom: 75px;
   }
-}
-
-.contacts__row {  
-  @media ($tablet-widths) and ($tablet-widths-max) {
+ 
+  li {
     display: inline-block;
-    vertical-align: top;
-    width: 332px;
+    font-size: 14px; 
     
-    font-size: 16px;     
+    @media ($tablet-widths) {
+      font-size: 16px;
+    
+    }
   }
 }
 
@@ -115,6 +118,17 @@
 
 .contacts__value--email {
   position: relative;
+  margin-bottom: 29px;
+}
+
+.contacts__value--email {  
+  @media ($tablet-widths) {
+    margin-right: 73px;
+  }
+  
+  @media ($desktop-widths){
+    margin-right: 2px;
+  }
 }
 
 .contacts__value--email a:after {
@@ -134,7 +148,8 @@
   }
 }
 
-
-.contacts__row:first-child .contacts__value {
-  padding-bottom: 29px;
+.contacts__value--address {  
+  @media ($mobile-widths-only) {
+    width: 182px;     
+  }
 }
