@@ -117,10 +117,6 @@
     }
   }
   
-  .main-nav--no-js .main-nav__item {
-    display: block;
-  }
-  
   .main-nav--closed .main-nav__item {
     display: none;
   }
@@ -128,6 +124,14 @@
   .main-nav--closed .main-nav__logo {
     display: block;
   } 
+  
+  .main-nav--no-js .main-nav__item {
+    display: block;
+  }
+  
+  .main-nav--no-js .main-nav__btn{
+    display: none;
+  }
 }
 
 @media ($tablet-widths) {
