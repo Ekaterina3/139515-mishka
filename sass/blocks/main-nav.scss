@@ -37,6 +37,14 @@
   font-weight: bold;
   
   border-top: 1px solid #ececec;
+  
+  &:hover {
+    opacity: 0.6;
+  }
+  
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__logo a {
@@ -151,6 +159,7 @@
     display: flex;
     flex-direction: column;
     
+    width: 100%;
     padding: 0 50px;
   }
   
@@ -265,6 +274,14 @@
     margin-right: 75px;
     
     font-weight: bold;
+    
+    &:hover {
+    opacity: 0.6;
+    }
+  
+    &:active {
+    opacity: 0.3;
+    }
   }
   
   .main-nav__item a {

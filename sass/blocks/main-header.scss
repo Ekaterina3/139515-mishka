@@ -150,6 +150,7 @@
   vertical-align: middle;
   box-sizing: border-box;
   width: 320px;
+  min-height: 103px;
   padding-top: 26px;
   padding-bottom: 29px;
   padding-left: 29px;
@@ -158,6 +159,15 @@
   @include basic-font($font-family, 18px, 24px, bold, #ffffff);
   text-align: left;
   
+  &:hover {
+    min-height: 108px;
+    margin-top: -5px;
+  }
+  
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
   @media ($tablet-widths) {
     width: 334px;
     min-height: 117px;
@@ -165,6 +175,11 @@
     padding-left: 38px;
     
     line-height: 28px;
+    
+    &:hover {
+    min-height: 122px;
+  }
+    
   }
 
   @media ($desktop-widths) {

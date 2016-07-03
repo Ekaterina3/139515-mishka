@@ -11,6 +11,10 @@
   
   @include basic-font($font-family, 18px, 18px, bold, $font-color);
   
+  &:active {
+    opacity: 0.3;
+    }
+  
   @media ($tablet-widths) {
     min-width: 182px;
     min-height: 34px;
@@ -29,6 +33,10 @@
   height: 47px;
   top: 20px;
   right: 33px;
+  
+  :hover path {
+    fill: #51c4b2;
+  }
   
   @media ($tablet-widths) {
     top: 1px;
