@@ -8,6 +8,14 @@
     
   border: 1px solid #ececec;
   
+  &:hover {
+    box-shadow: 0 5px 14px 0 #ececec;
+  }
+  
+  &:active{
+    box-shadow: 0 2px 8px 0 #ececec;
+  }
+  
   @media ($tablet-widths) and ($tablet-widths-max) {
     height: 334px;
     margin-bottom: 52px;
@@ -63,6 +71,14 @@
 .catalog-item__name {
   @include basic-font($font-family, 16px, 24px, bold, $font-color);
   
+  &:hover {
+    opacity: 0.6;
+  }
+  
+  &:active {
+    opacity: 0.3;
+  }
+  
   @media ($tablet-widths) {
     font-size: 18px;
   }
@@ -105,6 +121,14 @@
     height: 18px;
     background-image: url("../img/icon-cart.svg");
     background-repeat: no-repeat;
+  }
+  
+  &:hover {
+    opacity: 0.6;
+  }
+  
+  &:active {
+    opacity: 0.3;
   }
   
   @media ($tablet-widths) {
@@ -153,6 +177,4 @@
     top: -4px;
   }
 }
-
-
 

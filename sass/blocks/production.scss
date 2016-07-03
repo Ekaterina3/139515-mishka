@@ -8,7 +8,13 @@
   
   border: 1px solid #ececec;
   
+  &:hover {
+    box-shadow: 0 5px 14px 0 #ececec;
+  }
   
+  &:active {
+    box-shadow: 0 2px 8px 0 #ececec;
+  }
   
   @media ($tablet-widths) {
     margin-bottom: 63px;
@@ -114,19 +120,48 @@
 }
 
 .production__play-btn {
-    position: absolute;
-    top: 40px;
-    left: 80px;
+  position: absolute;
+  top: 40px;
+  left: 80px;
+
+  width: 101px;
+  height: 77px;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-size: 101px 77px;
+
+  &:hover {
+    top: 30px;
+    left: 73px;
     
-    width: 101px;
-    height: 77px;
-    background-image: url("../img/icon-play.svg");
-    background-repeat: no-repeat;
-    background-size: 101px 77px;
+    width: 121px;
+    height: 92px;
+    background-size: 121px 92px;
+  }
+
+  &:active{
+    top: 50px;
+    left: 88px;
+    
+    width: 81px;
+    height: 61px;
+    background-size: 81px 61px;
+    opacity: 0.7;
+  }
   
   @media ($tablet-widths) {
     top: 193px;
     left: 284px;
+    
+    &:hover {
+      top: 183px;
+      left: 277px;
+    }
+    
+    &:active {
+      top: 203px;
+      left: 292px;
+    }
   }
 }
 

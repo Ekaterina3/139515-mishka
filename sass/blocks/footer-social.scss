@@ -41,6 +41,10 @@
     background-image: url("../img/icon-twitter.svg");
     background-size: 24px 20px;
   }
+  
+  &:active {
+    opacity: 0.3;
+    }
 }
 
 
